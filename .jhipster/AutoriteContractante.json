@@ -1,0 +1,48 @@
+{
+  "changelogDate": "20230721145528",
+  "entityTableName": "autorite_contractante",
+  "fields": [
+    {
+      "fieldName": "autoriteContractanteLibelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteInitiale",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteResponsable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteAdressMail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteSiteWeb",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteAdresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteTelephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteFax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteContractanteDescription",
+      "fieldType": "String"
+    }
+  ],
+  "name": "AutoriteContractante",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
+}

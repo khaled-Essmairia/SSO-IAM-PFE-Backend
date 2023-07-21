@@ -1,6 +1,7 @@
 {
   "changelogDate": "20230428094644",
   "dto": "no",
+  "entityTableName": "role",
   "fields": [
     {
       "fieldName": "name",
@@ -22,5 +23,6 @@
   "pagination": "pagination",
   "readOnly": false,
   "relationships": [],
+  "searchEngine": "no",
   "service": "serviceClass"
 }
