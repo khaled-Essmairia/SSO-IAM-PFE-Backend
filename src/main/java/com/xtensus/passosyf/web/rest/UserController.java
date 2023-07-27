@@ -135,7 +135,7 @@ public class UserController {
         this.authorizationStatus = authorizationStatus;
     }
 
-    // @Authorize
+     //@Authorize
     @GetMapping("users/liste-users")
     public List<UserRepresentation> getUser() {
         return keycloakUserService.getUsers111();
@@ -1881,7 +1881,7 @@ public class UserController {
     	    } catch (Exception e) {
     	        e.printStackTrace();
     	    } finally {
-    	        keycloak.close();
+    	       // keycloak.close();
     	    }
     	}
     private List<String> getLDAPGroupNames() throws NamingException {

@@ -2,6 +2,7 @@ package com.xtensus.passosyf.web.rest;
 
 import com.xtensus.passosyf.domain.AutoriteContractante;
 import com.xtensus.passosyf.repository.AutoriteContractanteRepository;
+import com.xtensus.passosyf.web.Authorize;
 import com.xtensus.passosyf.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -51,6 +52,7 @@ public class AutoriteContractanteResource {
      * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new autoriteContractante, or with status {@code 400 (Bad Request)} if the autoriteContractante has already an ID.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
+    @Authorize
     @PostMapping("/autorite-contractantes")
     public ResponseEntity<AutoriteContractante> createAutoriteContractante(@RequestBody AutoriteContractante autoriteContractante)
         throws URISyntaxException {
@@ -75,6 +77,7 @@ public class AutoriteContractanteResource {
      * or with status {@code 500 (Internal Server Error)} if the autoriteContractante couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
+    @Authorize
     @PutMapping("/autorite-contractantes/{id}")
     public ResponseEntity<AutoriteContractante> updateAutoriteContractante(
         @PathVariable(value = "id", required = false) final Long id,
@@ -110,6 +113,7 @@ public class AutoriteContractanteResource {
      * or with status {@code 500 (Internal Server Error)} if the autoriteContractante couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
+    @Authorize
     @PatchMapping(value = "/autorite-contractantes/{id}", consumes = { "application/json", "application/merge-patch+json" })
     public ResponseEntity<AutoriteContractante> partialUpdateAutoriteContractante(
         @PathVariable(value = "id", required = false) final Long id,
@@ -180,6 +184,7 @@ public class AutoriteContractanteResource {
      * @param pageable the pagination information.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of autoriteContractantes in body.
      */
+    @Authorize
     @GetMapping("/autorite-contractantes")
     public ResponseEntity<List<AutoriteContractante>> getAllAutoriteContractantes(@org.springdoc.api.annotations.ParameterObject Pageable pageable
     ) {
@@ -209,6 +214,7 @@ public class AutoriteContractanteResource {
      * @param id the id of the autoriteContractante to delete.
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
+    @Authorize
     @DeleteMapping("/autorite-contractantes/{id}")
     public ResponseEntity<Void> deleteAutoriteContractante(@PathVariable Long id) {
         log.debug("REST request to delete AutoriteContractante : {}", id);
